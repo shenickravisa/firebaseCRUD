@@ -1,0 +1,17 @@
+<section class="inicio">
+  <v-layout class="list-container-homework">
+    <div class="homework-detail" v-for="(tareas, index) in getHomeWork" :key="index">
+      <v-card class="detail-card" >
+        <v-list-item two-line>
+          <v-list-item-content>
+            <v-list-item-title>{{tareas.id}}</v-list-item-title>
+            <v-list-item-subtitle>{{tareas.nombre}}</v-list-item-subtitle>
+            <v-btn color="#ffd500" @click="getId(tareas.id)">Editar</v-btn>
+            <v-btn color="#ff1500" @click="delateById(tareas.id)">Eliminar</v-btn>
+          </v-list-item-content>
+        </v-list-item>
+      </v-card>
+    </div>
+    <v-btn @click="goAdd" text color="blue">Agregar nueva tarea</v-btn>
+  </v-layout>
+</section>

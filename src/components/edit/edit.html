@@ -1,0 +1,23 @@
+
+<section class="edit">
+  <v-form v-model="valid">
+    <v-container>
+      <v-row>
+        <v-col
+          cols="12"
+          md="12"
+        >
+          <v-text-field
+            v-model="firstname"
+            :rules="nameRules"
+            :label="id"
+            placeholder="nombre"
+            required
+          ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-btn :disabled="!valid" @click="edit">Aceptar</v-btn>
+    </v-container>
+  </v-form>
+</section>
+
